@@ -1,9 +1,8 @@
-
 import numpy as np
-impot pandas as pd
 from flask import Flask, request, jsonify, render_template
-from flask_ngrok import run_with_ngrok
+#from flask_ngrok import run_with_ngrok
 import pickle
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -17,7 +16,7 @@ X[:, 4] = labelencoder_X.fit_transform(X[:, 4])
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X = sc.fit_transform(X)
-run_with_ngrok(app)
+#run_with_ngrok(app)
 
 @app.route('/')
 def home():
@@ -54,4 +53,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
