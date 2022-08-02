@@ -1,1 +1,1 @@
-# Titanic_Ship_Prediction
+# Internship-Linear-regression
