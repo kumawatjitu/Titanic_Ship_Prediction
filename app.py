@@ -2,7 +2,7 @@
 import numpy as np
 impot pandas as pd
 from flask import Flask, request, jsonify, render_template
-
+from flask_ngrok import run_with_ngrok
 import pickle
 
 
