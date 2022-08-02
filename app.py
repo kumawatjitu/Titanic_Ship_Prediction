@@ -1,13 +1,14 @@
 
 import numpy as np
+impot pandas as pd
 from flask import Flask, request, jsonify, render_template
-from flask_ngrok import run_with_ngrok
+
 import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('/content/drive/My Drive/Assignment_4.pkl','rb')) 
-dataset= pd.read_csv('/content/drive/My Drive/train.csv')
+model = pickle.load(open('Assignment_4.pkl','rb')) 
+dataset= pd.read_csv('train.csv')
 X=dataset.iloc[:,[5,6,7,9,4,2]].values
 from sklearn.preprocessing import LabelEncoder
 labelencoder_X = LabelEncoder()
